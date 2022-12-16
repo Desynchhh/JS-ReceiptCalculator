@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #36393f;
+    color: #fff;
+}
+
+/* .container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+} */
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-container .form-row .delete-button {
+    color: red;
+    margin-left: 5px;
+}
+.form-container .form-row .delete-button:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.form-row-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row input {
+    margin: 7px;
+}
+
+.form-row input:first-child(input) {
+    margin-left: 0;
+}
+.form-row input:last-child {
+    margin-right: 0;
+}
+
+#receipt-form [type="submit"] {
+    margin-top: 10px;
+    padding: 7px;
+    height: fit-content;
+}
+
+.add-item {
+    height: fit-content;
+    margin: 15px;
+    padding: 7px;
+    margin-top: 65px;
+}
+
+.result-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
