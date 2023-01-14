@@ -19,13 +19,16 @@ window.addEventListener('load', () => {
         calcCost(e.target);
     });
 
-    const createInputElement = (type, name, placeholder) => {
+    const createInputElement = (type, name, placeholder, value=null) => {
         const input = document.createElement('input');
         input.id = name;
         input.setAttribute('type', type);
         input.setAttribute('name', name);
         input.setAttribute('placeholder', placeholder);
         input.setAttribute('step', 'any');
+        if(value !== null) {
+            input.setAttribute('value', value);
+        }
         return input;
     }
     
@@ -35,7 +38,7 @@ window.addEventListener('load', () => {
         
         const inputName = createInputElement('text', 'name', 'name');
         const inputPrice = createInputElement('number', 'price', 'price');
-        const inputPercentage = createInputElement('number', 'percentage', 'their percentage');
+        const inputPercentage = createInputElement('number', 'percentage', 'their percentage', 50);
         const inputDiscount = createInputElement('number', 'discount', 'discount');
         
         const deleteButton = document.createElement('span');
